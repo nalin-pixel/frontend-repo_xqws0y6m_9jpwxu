@@ -12,18 +12,19 @@ const images = [
 
 const Gallery = () => {
   return (
-    <section id="gallery" className="relative w-full bg-slate-950 py-20 text-slate-100">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(14,165,233,0.06),transparent_60%)]" />
+    <section id="gallery" className="relative w-full bg-slate-950 py-24 text-slate-100">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(14,165,233,0.08),transparent_60%)]" />
       <div className="relative mx-auto max-w-6xl px-6">
-        <motion.h2
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-8 text-center text-2xl font-bold text-white sm:text-3xl"
+          className="mb-10 text-center"
         >
-          Random Photos
-        </motion.h2>
+          <h2 className="text-2xl font-bold text-white sm:text-3xl">Random Photos</h2>
+          <p className="mt-2 text-sm text-white/70">A playful stream of visuals that inspire my builds.</p>
+        </motion.div>
 
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
           {images.map((src, idx) => (
@@ -38,10 +39,10 @@ const Gallery = () => {
               <img
                 src={src}
                 alt="Random tech"
-                className="h-40 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-48"
+                className="h-40 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-52"
                 loading="lazy"
               />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/50 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
             </motion.div>
           ))}
         </div>

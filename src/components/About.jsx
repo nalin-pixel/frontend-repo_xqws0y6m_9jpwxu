@@ -4,15 +4,15 @@ import { User, Rocket, Sparkles } from 'lucide-react';
 
 const About = () => {
   return (
-    <section id="about" className="relative w-full bg-slate-950 py-20 text-slate-100">
+    <section id="about" className="relative w-full bg-slate-950 py-24 text-slate-100">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(56,189,248,0.08),transparent_60%)]" />
-      <div className="relative mx-auto max-w-6xl px-6 grid gap-10 md:grid-cols-3">
+      <div className="relative mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 md:grid-cols-3">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur"
+          className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.03] p-6 backdrop-blur"
         >
           <div className="mb-4 flex items-center gap-3">
             <User className="h-5 w-5 text-cyan-400" />
@@ -28,7 +28,7 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.05 }}
-          className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur"
+          className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.03] p-6 backdrop-blur"
         >
           <div className="mb-4 flex items-center gap-3">
             <Rocket className="h-5 w-5 text-sky-400" />
@@ -44,7 +44,7 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur"
+          className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.03] p-6 backdrop-blur"
         >
           <div className="mb-4 flex items-center gap-3">
             <Sparkles className="h-5 w-5 text-blue-400" />
